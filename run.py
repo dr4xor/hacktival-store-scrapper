@@ -7,7 +7,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.route('/app', methods=["GET"])
+@app.route('/', methods=["GET"])
 def get_app_info():
     app_url = request.args.get('app_url')
 
@@ -39,5 +39,5 @@ def get_app_info():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=False)
 
