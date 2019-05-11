@@ -22,9 +22,6 @@ def get_app_info():
         return "{\"error\": \"The Playstore URL is invalid\"}", 400
 
     app_details = play_scraper.details(app_id)
-    print(app_details)
-    print(app_details.get('description'))
-    print(app_details.get('icon'))
 
     app_json = {
         "app_id": app_details.get('app_id'),
